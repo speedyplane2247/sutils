@@ -1,8 +1,7 @@
 function Sutils () {
     this.version = function ()
       {
-        // pre-release
-          $alert.info("Sutils 1.0.2")
+          $alert.info("Sutils 1.0")
       }
     this.x3Detect = function (pass) 
     {
@@ -96,6 +95,10 @@ this.createApp = function (exe,name,desc,icon) {
         "exec": exe,
         "icon": icon
     }
+}
+this.getCurrentVersion = function (returnTo) {
+    returnTo = $boot.VERSION
+    return returnTo
 }
   }
   var $sutils = new Sutils ();
