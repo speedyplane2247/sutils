@@ -117,7 +117,7 @@ if (type == "info") {
     $alert.info(body)
 }
 
-}
+}n
 this.notification = function(title,body) {
     $notif(title,body)
 }
@@ -146,6 +146,9 @@ this.windowAction = function(type) {
     if (type == "restore") {
         $window.current.restore();
     }
+}
+this.X3Enabler = function() {
+    $boot.X3("showBootMenu")
 }
 
   }
