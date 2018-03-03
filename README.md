@@ -50,9 +50,14 @@ $sutils.getID() : Gets the ID of the current app.
 
 $sutils.windowAction(type) : Does a specific action.
 Maximize: Expands the window.
+
 Restore: Restores it to stock size.
+
 Minimize: Hides the program.
+
 Close: Closes the progam with an animation.
+
 Destroy: Instanly removes application.
+
 
 $sutils.X3Enabler() : Enable noX3
