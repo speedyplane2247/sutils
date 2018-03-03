@@ -1,7 +1,7 @@
 function Sutils () {
     this.version = function ()
       {
-          $alert.info("Sutils 1.0.2")
+          $alert.info("Sutils 1.0.2-hotfix1")
       }
     this.x3Detect = function (pass) 
     {
@@ -55,7 +55,7 @@ return pass
   }
   this.rebootForced = function () {
       // forces a page reload (manual reboot)
-      location.reload
+      parent.location.reload
   }
   this.eeXe = function (command) {
 $alert.error("Not implemented yet.")
@@ -117,7 +117,7 @@ if (type == "info") {
     $alert.info(body)
 }
 
-}n
+}
 this.notification = function(title,body) {
     $notif(title,body)
 }
@@ -153,4 +153,4 @@ this.X3Enabler = function() {
 
   }
   var $sutils = new Sutils ();
-// Release
+// 1.0.2 Hot Fix
