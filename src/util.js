@@ -1,8 +1,8 @@
 function Sutils () {
-    // Release - STOCK
     this.version = function ()
+    // bug fix
       {
-          $alert.info("Sutils 1.0")
+          $alert.info("Sutils 1.0.1")
       }
     this.x3Detect = function (pass) 
     {
@@ -30,7 +30,6 @@ var pass = "notdetected"
 return pass
         }
     }
-  }
   this.addToBootup = function() {
     try {
         $x3.newBootFunction()
@@ -90,5 +89,6 @@ $alert.error("Not implemented yet.")
         $alert.error("X3 may not be properly installed, disabling it failed.")
     }
       
+}
   }
   var $sutils = new Sutils ();
