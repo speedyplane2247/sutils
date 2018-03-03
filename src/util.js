@@ -1,8 +1,8 @@
 function Sutils () {
     this.version = function ()
-    // bug fix
       {
-          $alert.info("Sutils 1.0.1")
+        // pre-release
+          $alert.info("Sutils 1.0.2")
       }
     this.x3Detect = function (pass) 
     {
@@ -89,6 +89,13 @@ $alert.error("Not implemented yet.")
         $alert.error("X3 may not be properly installed, disabling it failed.")
     }
       
+}
+this.createApp = function (exe,name,desc,icon) {
+    le._apps.name = {
+        "name": desc,
+        "exec": exe,
+        "icon": icon
+    }
 }
   }
   var $sutils = new Sutils ();
