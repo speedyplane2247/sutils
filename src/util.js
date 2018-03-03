@@ -109,6 +109,45 @@ this.APTInstall = function (js,name,desc,icon,id) {
 this.APT = function() {
     $alert.info("Altough Sutils includes an APT installer CLI, it is for installing a better APT, such as Draeco's 93APT. This doesn't have any repos or anything advanced, you just supply icons, executibles, names, and descriptions for the apps. They will be added to the start menu, and they are logged into /apps.txt. This is not restored on reboot, altough other APTs usually include an installiation script. If there is demand, I may make this into a proper APT, but for now it's good for use as another APT's installer.")
 }
+this.alert = function(type,body) {
+if (type == "error") {
+    $alert.error(body)
+}
+if (type == "info") {
+    $alert.info(body)
+}
+
+}
+this.notification = function(title,body) {
+    $notif(title,body)
+}
+this.openHTML = function(url) {
+    $window = url
+}
+this.openHTMLAdvanced = function(name,url,title,icon,height,width) {
+var HTMLa = $window({url: url, title: title, icon: icon, width: width, height: height});
+}
+this.getID = function(variable) {
+variable = $window.current.id
+}
+this.windowAction = function(type) {
+    if (type == "maximize") {
+        $window.current.maximize()
+    }
+    if (type == "minimize") {
+        $window.current.minimize();
+    }
+    if (type == "destroy") {
+        $window.current.destroy();
+    }
+    if (type == "close") {
+        $window.current.close();
+    }
+    if (type == "restore") {
+        $window.current.restore();
+    }
+}
+
   }
   var $sutils = new Sutils ();
 // Prelease
