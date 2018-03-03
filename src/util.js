@@ -1,4 +1,5 @@
 function Sutils () {
+    // Release - STOCK
     this.version = function ()
       {
           $alert.info("Sutils 1.0")
