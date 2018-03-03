@@ -1,7 +1,7 @@
 function Sutils () {
     this.version = function ()
       {
-          $alert.info("Sutils 1.0")
+          $alert.info("Sutils 1.0.2")
       }
     this.x3Detect = function (pass) 
     {
@@ -16,7 +16,7 @@ return pass
         }
     }
     this.credits = function () {
-        $alert.info("Sutils 1.0 - Written by speedyplane2447 (c) speedyplane2247 2017-2018")
+        $alert.info("Sutils 1.0.2 - Written by speedyplane2447 (c) speedyplane2247 2017-2018")
     }
     this.checkFor93inject = function (pass) {
         if ($boot.daemonArgs.indexOf("X3Substrate")) {
@@ -100,5 +100,15 @@ this.getCurrentVersion = function (returnTo) {
     returnTo = $boot.VERSION
     return returnTo
 }
+this.APTInstall = function (js,name,desc,icon,id) {
+    localforage.getItem('/app.txt').then(function(returnedString){return returnedString})
+    this.writeFileRaw("/app.txt",returnedString+"\n"+js+name+desc+icon+id)
+    this.createApp("js "+js,name,desc,icon)
+    // this installs for that session, altough it writes an open standard for other apps to use, I'm not providing that because of malware.
+}
+this.APT = function() {
+    $alert.info("Altough Sutils includes an APT installer CLI, it is for installing a better APT, such as Draeco's 93APT. This doesn't have any repos or anything advanced, you just supply icons, executibles, names, and descriptions for the apps. They will be added to the start menu, and they are logged into /apps.txt. This is not restored on reboot, altough other APTs usually include an installiation script. If there is demand, I may make this into a proper APT, but for now it's good for use as another APT's installer.")
+}
   }
   var $sutils = new Sutils ();
+// Prelease
